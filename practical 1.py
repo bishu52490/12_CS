@@ -1,3 +1,18 @@
+'''Q) Write a program that simulates a traffic light. The program 
+should consists of following:
+1. A user defined function light() that accept string as parameter 
+and return 0 when parameter is RED, 1 if YELLOW , 2 if GREEN
+2. A user defined function trafficLight() that accepts input from user,
+display error if user input other than red yellow green; 
+func light() is called and input is passed as argument, and following 
+message displayed depending on return value of light():
+0 --> 'STOP , your life is precious',
+1 --> 'Please WAIT, till the light is Green',
+2 --> 'GO! Thanks for being patient'
+'SPEED THRILLS BUT KILLS' after trafficLight() is executed
+'''
+
+
 def trafficLight():
     msg = {0: "STOP, your life is precious",
            1: "Please WAIT, till the light turns Green",
