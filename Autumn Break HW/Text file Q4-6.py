@@ -8,6 +8,7 @@ def Show_words():
                 print(line[:-1])            #line[:-1] --> to remove extra newlines
             line = file.readline()      #for taking further lines
 
+
 #Ques 5
 def DISPLAYWORDS():
     with open("STORY.TXT","r") as file:
@@ -18,6 +19,14 @@ def DISPLAYWORDS():
                 if len(word) < 4:
                     print(word)
             line = file.readline()          #for taking further lines as string and return empty string after last line
+#OR
+def DISPLAYWORDS():
+    with open("STORY.TXT","r") as file:
+        content = file.read()
+        words = content.split()
+        for word in words:          #takes each word from list (words)
+            if len(word) < 4:
+                print(word)
 
 #Ques 6
 def AMCount():
@@ -37,4 +46,11 @@ def AMCount():
     #at last print results
     print(f"The Alphabet 'a' occured {a_count} times and 'm' occured {m_count} times ")
 
-    
+#OR
+def AMCount():
+    with open("STORY.TXT","r") as file:
+        content = file.read()                               #reads everything in file
+        a_count = content.lower().count('a')        #lowercase all content then count occurence of 'a'
+        m_count = content.lower().count('m')     #lowercase all content then count occurence of 'a'
+        #at last print results
+    print(f"The Alphabet 'a' occured {a_count} times and 'm' occured {m_count} times ")
