@@ -43,4 +43,14 @@ def CountRec(Author):
 
 #Ques 9
 import pickle
-def 
+def countrec():
+    count = 0
+    with open("STUDENT.DAT","rb") as file:
+        try:
+            while True:
+                record = pickle.load(file)
+                if record[2] > 75:
+                    print(f"ADM_NO: {record[0]}  NAME: {record[1]}  PERCENTAGE:{record[2]}")
+        except EOFError:
+            print("Number of students scoring above 75%: ",count)
+
